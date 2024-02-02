@@ -7,7 +7,7 @@ window.addEventListener('scroll', function() {
 
     scrollPercentage = Math.min(1.0, scrollPosition / 450);
     title.style.fontSize = 60 - 45 * scrollPercentage + 'px';
-    title.style.marginTop = 40 - 40 * scrollPercentage + 'vh';
+    title.style.marginTop = 30 - 30 * scrollPercentage + 'vh';
     subtitle.style.opacity = 1.5 - scrollPercentage*2;
 
 });
