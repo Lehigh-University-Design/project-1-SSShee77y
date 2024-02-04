@@ -9,8 +9,8 @@
 
 p, h1, h2, h3, h4, h5, h6, em, li, span, strong {
     color: var(--color-theme-dark);
-    /* border: solid red; */
-    line-height: 125%;
+    /* border: 2px dashed red; */
+    line-height: 1.25;
 }
 
 a {
@@ -40,14 +40,13 @@ img {
     /* Properties */
     padding: 0;
     margin: 0;
-    min-height: 800px;
+    min-height: 300px;
     height: 100vh;
     background-color: var(--color-theme-dark);
     display: block;
     justify-content: center;
     align-items: center;
     text-align: center;
-    width: 100%;
     border-bottom: 3px solid var(--color-theme-accent);
 
     ul {
@@ -59,28 +58,29 @@ img {
 
     h1 {
         margin-top: 30vh;
-        padding-block: 15px;
+        padding-block: 18px 15px;
         background-color: var(--color-theme-dark);
-        font-size: 60px;
-        margin-bottom: 10px;
+        font-family: 'Arvo', serif;
+        font-size: clamp(20px, 6vw, 60px);
         color: var(--color-theme-light);
     }
     h2 {
-        margin-top: 30px;
+        margin-top: min(3vw, 30px);
         width: 100%;
         font-weight: 100;
-        font-size: 20px;
+        line-height: 1.5;
+        font-size: clamp(15px, 2vw, 20px);
         color: var(--color-theme-light);
     }
     h3 {
-        margin-top: 120px;
+        margin-top: min(10vw, 100px);
         width: 100%;
         font-weight: 100;
-        font-size: 20px;
+        font-size: clamp(15px, 2vw, 20px);
         color: var(--color-theme-mid);
     }
     h4 {
-        margin-top: -30px;
+        margin-top: min(-3vw, -30px);
         color: var(--color-theme-mid);
         font-weight: 100;
         font-size: 80px;
@@ -89,10 +89,11 @@ img {
 
 .content-wrapper {
     margin: auto;
-    padding: 15px 45px 90px 45px;
+    padding-block: min(1vw, 1px) 90px;
+    padding-inline: min(7.5vw, 45px);
     background-color: var(--color-theme-light-faded);
-    width: 70vw;
-    max-width: 800px;
+    width: clamp(450px, 70vw, 800px);
+    max-width: 85vw;
     display: block;
     justify-content: center;
     align-items: center;
