@@ -34,7 +34,7 @@
 
 .navbar-links {
     margin: 0;
-    padding-top: 3px;
+    padding: 3px 0px 0px 0px;
 }
 
 .navbar a {

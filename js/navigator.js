@@ -14,7 +14,9 @@ var websites = [
     "https://lehigh-university-design.github.io/project-1-ellafall/",
     "https://lehigh-university-design.github.io/project-1-laurj46/",
     "https://lehigh-university-design.github.io/project-1-kaydolan/",
-    "https://lehigh-university-design.github.io/project-1-dsw225/"
+    "https://lehigh-university-design.github.io/project-1-dsw225/",
+    "https://lehigh-university-design.github.io/project-1-owen-zematis/", 
+    "htpps://lehigh-universtiy-design.github.io/project-1-timaldroubi/"
 ];
 
 /*
@@ -23,13 +25,8 @@ var websites = [
 var currentIndex = 0;
 
 window.onload = function getCurrentIndex() {
-    var path = window.location.href; 
-    var page = path.split("/");
-
-    if (page.includes("https") || page.includes("http"))
-        currentIndex = websites.indexOf(path);
-    else
-        currentIndex = websites.indexOf(page.pop());
+    var path = window.location.href.split("#")[0];
+    currentIndex = websites.indexOf(path);
 }
 
 /*
