@@ -116,3 +116,17 @@ body {
     justify-content: center;
     align-items: center;
 }
+
+.inline-images {
+    margin: 0;
+    padding: 0px;
+    width: 100%;
+    background-color: var(--color-navbar-bg);
+    display: flex;
+    padding-block: 15px;
+    img {
+        margin-right: 2%;
+        width: 48%;
+        border: 2px solid var(--color-theme-dark);
+    }
+}
