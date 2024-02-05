@@ -90,14 +90,23 @@ window.addEventListener('scroll', function() {
     var title = document.getElementById('title');
     var subtitle = document.getElementById('subtitle');
 
-    // Affected values
     scrollPercentage = Math.min(1.0, scrollPosition / (titleBlock.clientHeight - 2 * title.clientHeight));
+    
+    // Title values
     fontSizeChange = Math.min(60-45*scrollPercentage, (6-4.5*scrollPercentage)*vwToPx);
     title.style.fontSize = Math.max(fontSizeChange, 20) + 'px';
     title.style.marginTop = 30 - 30 * scrollPercentage + 'vh';
-    subtitle.style.opacity = 1.5 - scrollPercentage*4;
-    scrollText.style.top = (0 - scrollPosition) + 'px';
-    scrollText.style.opacity = Math.min(0.4 - scrollPercentage/1.5, 0.2);
+
+    // Subtitle Values
+    subtitleOpacity = 1.5 - scrollPercentage*4;
+    subtitle.style.opacity = subtitleOpacity;
+    subtitle.style.visibility = (subtitleOpacity <= 0) ? 'hidden' : '';
+
+    // ScrollText Values
+    scrollText.style.top = -scrollPosition + 'px';
+    scrollTextOpacity = Math.min(0.4 - scrollPercentage/1.5, 0.2);
+    scrollText.style.opacity = scrollTextOpacity;
+    scrollText.style.visibility = (scrollTextOpacity <= 0) ? 'hidden' : '';
 
     // Replace border on title with block border
     if (scrollPosition >= titleBlock.clientHeight - title.clientHeight) {
@@ -126,7 +135,7 @@ function createScrollingText() {
         line.classList.add('line');
 
         var spans = [];
-        for (let i = 0; i < screen.width / 100; i++) {
+        for (let i = 0; i < screen.width / 140 + 2; i++) {
             var color = colors[Math.floor(Math.random()*colors.length)];
             var randomDomain = bgDomains[Math.floor(Math.random() * bgDomains.length)];
             var span = "<span style='color: " + color + ";'>" + randomDomain + "</span>";

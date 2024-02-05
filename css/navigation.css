@@ -14,28 +14,33 @@
     background-color: var(--color-navbar-bg);
     display: flex;
     justify-content: center;
-    align-items: center;
     opacity: 0.70;
     width: 100%;
+    padding-block: 15px;
 
     p, a, h1, h2, h3, h4, h5, h6, em, div, li, span, strong {
-        line-height: 0%;
+        margin: 0px;
+        line-height: 100%;
         color: var(--color-text);
     }
-
 }
 
 .navbar-name {
+    margin: 0px;
     padding-right: 20px;
     border-right: 2px solid var(--color-dark-faded);
     color: var(--color-text);
+}
+
+.navbar-links {
+    margin: 0px;
 }
 
 .navbar a {
     text-decoration: none;
     font-size: larger;
     font-weight: bold;
-    padding-left: 20px;
+    margin-left: 20px;
     color: var(--color-link);
 }
 
