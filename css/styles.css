@@ -24,7 +24,7 @@ ul {
 
 body {
     background-color: var(--color-theme-light);
-    font-family: 'Tahoma', sans-serif;
+    font-family: 'Roboto', sans-serif;
     padding: 0;
     margin: 0;
 }
@@ -65,25 +65,22 @@ img {
         color: var(--color-theme-light);
     }
     h2 {
-        margin-top: min(3vw, 30px);
+        margin-top: 30px;
         width: 100%;
-        font-weight: 100;
+        font-weight: 300;
         line-height: 1.5;
         font-size: clamp(15px, 2vw, 20px);
         color: var(--color-theme-light);
     }
     h3 {
-        margin-top: min(10vw, 100px);
+        margin-top: 100px;
         width: 100%;
-        font-weight: 100;
+        font-weight: 300;
         font-size: clamp(15px, 2vw, 20px);
         color: var(--color-theme-mid);
     }
-    h4 {
-        margin-top: min(-3vw, -30px);
-        color: var(--color-theme-mid);
-        font-weight: 100;
-        font-size: 80px;
+    img {
+        filter: brightness(51%);
     }
 }
 

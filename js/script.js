@@ -7,11 +7,11 @@ window.addEventListener('scroll', function() {
     var title = document.getElementById('title');
     var subtitle = document.getElementById('subtitle');
 
-    scrollPercentage = Math.min(1.0, scrollPosition / 800);
+    scrollPercentage = Math.min(1.0, scrollPosition / (titleBlock.clientHeight - 2 * title.clientHeight));
     fontSizeChange = Math.min(60-45*scrollPercentage, (6-4.5*scrollPercentage)*vwToPx);
     title.style.fontSize = Math.max(fontSizeChange, 20) + 'px';
     title.style.marginTop = 30 - 30 * scrollPercentage + 'vh';
-    subtitle.style.opacity = 1.5 - scrollPercentage*3;
+    subtitle.style.opacity = 1.5 - scrollPercentage*4;
 
     // Get the element with the class .title-block
     if (scrollPosition >= titleBlock.clientHeight - title.clientHeight) {
