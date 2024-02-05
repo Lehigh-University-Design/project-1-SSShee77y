@@ -104,9 +104,7 @@ window.addEventListener('scroll', function() {
 
     // ScrollText Values
     scrollText.style.top = -scrollPosition + 'px';
-    scrollTextOpacity = Math.min(0.4 - scrollPercentage/1.5, 0.2);
-    scrollText.style.opacity = scrollTextOpacity;
-    scrollText.style.visibility = (scrollTextOpacity <= 0) ? 'hidden' : '';
+    scrollText.style.opacity = Math.min(.6 - scrollPercentage/1.5, 0.2);
 
     // Replace border on title with block border
     if (scrollPosition >= titleBlock.clientHeight - title.clientHeight) {

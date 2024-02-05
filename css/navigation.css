@@ -19,8 +19,8 @@
     padding-block: 15px;
 
     p, a, h1, h2, h3, h4, h5, h6, em, div, li, span, strong {
-        margin: 0px;
-        line-height: 100%;
+        margin: auto;
+        padding: auto;
         color: var(--color-text);
     }
 }
@@ -33,7 +33,8 @@
 }
 
 .navbar-links {
-    margin: 0px;
+    margin: 0;
+    padding-top: 3px;
 }
 
 .navbar a {
