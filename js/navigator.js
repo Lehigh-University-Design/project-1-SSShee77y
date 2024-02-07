@@ -6,14 +6,17 @@ var websites = [
     "https://lehigh-university-design.github.io/project-1-sit225/",
     "https://lehigh-university-design.github.io/project-1-lar326/",
     "https://lehigh-university-design.github.io/project-1-adrawoot/",
+    
     "https://lehigh-university-design.github.io/project-1-mmurata22/",
     "https://lehigh-university-design.github.io/project-1-SSShee77y/",
     "https://lehigh-university-design.github.io/project-1-eyt225/",
     "https://lehigh-university-design.github.io/project-1-shirls326/",
+    
     "https://lehigh-university-design.github.io/project-1-Colin941/",
     "https://lehigh-university-design.github.io/project-1-ellafall/",
     "https://lehigh-university-design.github.io/project-1-laurj46/",
     "https://lehigh-university-design.github.io/project-1-kaydolan/",
+    
     "https://lehigh-university-design.github.io/project-1-dsw225/",
     "https://lehigh-university-design.github.io/project-1-owen-zematis/", 
     "htpps://lehigh-universtiy-design.github.io/project-1-timaldroubi/"
@@ -27,6 +30,9 @@ var currentIndex = 0;
 window.onload = function getCurrentIndex() {
     var path = window.location.href.split("#")[0];
     currentIndex = websites.indexOf(path);
+    if (currentIndex == -1) {
+        currentIndex = websites.indexOf(path.split("/").pop());
+    }
 }
 
 /*
